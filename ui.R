@@ -3,7 +3,7 @@ shinyUI(
   fluidPage(
 
       # see example at: http://cesiumjs.org/tutorials/cesium-up-and-running/#hello-again-world
-      includeScript("www/Cesium.js"),
+      tags$script(src = "Cesium.js"),
       includeCSS("www/widgets.css"),
 
       tags$style("
@@ -36,7 +36,7 @@ shinyUI(
       div(id="cesiumContainer"),
 
       tags$script("
-        var viewer = new Cesium.CesiumViewer('cesiumContainer');
+        var viewer = new Cesium.Viewer('cesiumContainer');
       ")
    )
 )
